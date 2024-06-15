@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cguambaS2.vistas.vPrincipal"
+             Title="vPrincipal">
+    <ScrollView>
+        <VerticalStackLayout
+    Spacing="25"
+   
+    Padding="20">
+            <Label 
+                Text="Semana 2: CGuamba Sistema de calificaciones"
+                FontSize="28"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                TextColor="DarkRed"
+                />
+
+            <Picker x:Name="pkEstudiantes" Title="Estudiantes">
+                <Picker.Items>
+                    <x:String>Cristian Guamba</x:String>
+                    <x:String>Katherine Reinoso</x:String>
+                    <x:String>Darío Guamba</x:String>
+                    <x:String>Daniela Guamba</x:String>
+                    <x:String>Franklin Guamba</x:String>
+                    <x:String>María Muñoz</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label 
+                Text="Parcial 1"
+                FontSize="15"
+                FontAttributes="Bold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start"
+                />
+
+            <Entry
+                x:Name="txtNumSegP1"
+                Placeholder="Ingrese número de seguimiento (1)"
+                Keyboard="Numeric"
+                />
+
+            <Entry
+                x:Name="txtNumExamP1"
+                Placeholder="Ingrese número de exámen (1)"
+                Keyboard="Numeric"
+                />
+
+            <Label 
+                x:Name="lblNotaParcial1"
+                Text="Nota Parcial (1): "
+                FontSize="18"
+                FontAttributes="Bold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start"
+                BackgroundColor="Yellow"
+                />
+
+            <Label 
+                Text="Parcial 2"
+                FontSize="15"
+                FontAttributes="Bold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start"
+                />
+
+            <Entry
+                x:Name="txtNumSegP2"
+                Placeholder="Ingrese número de seguimiento (2)"
+                Keyboard="Numeric"
+                />
+
+            <Entry
+                x:Name="txtNumExamP2"
+                Placeholder="Ingrese número de exámen (2)"
+                Keyboard="Numeric"
+                />
+
+            <Label 
+                x:Name="lblNotaParcial2"
+                Text="Nota Parcial (2): "
+                FontSize="18"
+                FontAttributes="Bold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start"
+                BackgroundColor="Yellow"
+                />
+
+            <Label 
+                Text="Ingrese fecha del registro: "
+                FontSize="15"
+                FontAttributes="Bold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                />
+
+            <DatePicker 
+                HorizontalOptions="Center"
+                x:Name="dpFecha"
+                Format="dd/mm/yyyy"/>
+
+            <Label 
+                x:Name="lblNotaFinal"
+                Text="Nota Final: "
+                FontSize="18"
+                FontAttributes="Bold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start"
+                BackgroundColor="Red"
+                />
+
+            <Button
+                x:Name="btnCalcular"
+                Text="Calcular Notas del estudiante"
+                Clicked="BtnCalcular_Clicked"/>
+        </VerticalStackLayout>
+
+    </ScrollView>
+    
+</ContentPage>
