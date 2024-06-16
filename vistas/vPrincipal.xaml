@@ -13,7 +13,7 @@
                 FontSize="28"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center"
-                TextColor="DarkRed"
+                TextColor="WhiteSmoke"
                 />
             
             <Label 
@@ -21,7 +21,7 @@
                 FontSize="28"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center"
-                TextColor="DarkBlue"
+                TextColor="Plum"
                 />
 
             <Picker x:Name="pkEstudiantes" Title="Estudiantes">
