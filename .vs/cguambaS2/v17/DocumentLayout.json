@@ -37,12 +37,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -64,7 +60,7 @@
               "RelativeDocumentMoniker": "vistas\\Login.xaml",
               "ToolTip": "D:\\CRIS\\Documentos\\Israel\\semestre 8\\Aplicaciones m\u00F3viles\\semana3\\tarea\\AppsMovilesTareaS3-CGuamba\\vistas\\Login.xaml",
               "RelativeToolTip": "vistas\\Login.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACUAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-06-15T03:49:58.944Z",
               "EditorCaption": ""
@@ -113,8 +109,7 @@
               "RelativeToolTip": "vistas\\vPrincipal.xaml.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAowA0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T01:37:00.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-08T01:37:00.799Z"
             },
             {
               "$type": "Document",
@@ -126,8 +121,7 @@
               "RelativeToolTip": "vistas\\vPrincipal.xaml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-08T01:36:57.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-08T01:36:57.847Z"
             }
           ]
         }

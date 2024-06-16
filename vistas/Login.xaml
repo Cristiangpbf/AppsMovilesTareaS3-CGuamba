@@ -46,7 +46,7 @@
                    HorizontalTextAlignment="Center"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
-                   FontSize="18"
+                   FontSize="16"
                    Grid.Row="1"
                    Grid.Column="0"/>
 

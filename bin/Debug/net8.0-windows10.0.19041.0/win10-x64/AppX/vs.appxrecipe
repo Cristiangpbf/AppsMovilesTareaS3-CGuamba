@@ -30,7 +30,7 @@
     <AppXManifest Include="D:\CRIS\Documentos\Israel\semestre 8\Aplicaciones móviles\semana3\tarea\AppsMovilesTareaS3-CGuamba\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-06-16T03:49:22.571</Modified>
+      <Modified>2024-06-16T17:46:36.804</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CRIS\Documentos\Israel\semestre 8\Aplicaciones móviles\semana3\tarea\AppsMovilesTareaS3-CGuamba\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\cguambaS2.dll">
       <PackagePath>cguambaS2.dll</PackagePath>
-      <Modified>2024-06-16T03:49:21.315</Modified>
+      <Modified>2024-06-16T17:46:35.255</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CRIS\Documentos\Israel\semestre 8\Aplicaciones móviles\semana3\tarea\AppsMovilesTareaS3-CGuamba\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>cguambaS2.exe</PackagePath>
-      <Modified>2024-06-16T03:49:21.374</Modified>
+      <Modified>2024-06-16T17:46:35.322</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\CRIS\Documentos\Israel\semestre 8\Aplicaciones móviles\semana3\tarea\AppsMovilesTareaS3-CGuamba\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
