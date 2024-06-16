@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cguambaS2.vistas.Login"
+             Title="Inicio de sesion">
+    <VerticalStackLayout
+    Spacing="20"
+    Padding="20">
+        <Label 
+        Text="INICIO DE SESIÓN"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" 
+        FontSize="20"
+        TextColor="Red"/>
+
+        <Image Source="userlogin.png" 
+           WidthRequest="100"/>
+
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="USUARIO"
+                   HorizontalOptions="Center"
+                   FontSize="16"
+                   VerticalOptions="Center"
+                   Grid.Row="0"
+                   Grid.Column="0">
+            </Label>
+
+            <Entry x:Name="txtUsuario"
+                   Placeholder="Ingrese el usuario"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   />
+
+            <Label Text="CONTRASEÑA"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+
+            <Entry x:Name="txtPassword"
+                   Placeholder="Ingrese la contraseña"
+                   IsPassword="True"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalTextAlignment="Center"/>
+
+            <Button x:Name="btnInicio"
+                    Text="INICIAR SESION"
+                    Clicked="btnInicio_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"/>
+
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>

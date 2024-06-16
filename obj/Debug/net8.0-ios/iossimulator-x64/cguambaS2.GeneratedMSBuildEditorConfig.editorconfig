@@ -46,6 +46,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = cguambaS2.Resources.Styles
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[D:/CRIS/Documentos/Israel/semestre 8/Aplicaciones móviles/semana3/tarea/AppsMovilesTareaS3-CGuamba/vistas/Login.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = cguambaS2.vistas.Login.xaml
+build_metadata.AdditionalFiles.TargetPath = vistas\Login.xaml
+build_metadata.AdditionalFiles.RelativePath = vistas\Login.xaml
+
 [D:/CRIS/Documentos/Israel/semestre 8/Aplicaciones móviles/semana3/tarea/AppsMovilesTareaS3-CGuamba/vistas/vPrincipal.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = cguambaS2.vistas.vPrincipal.xaml

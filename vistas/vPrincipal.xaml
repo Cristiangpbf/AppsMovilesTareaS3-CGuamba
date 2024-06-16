@@ -9,11 +9,19 @@
    
     Padding="20">
             <Label 
-                Text="Semana 2: CGuamba Sistema de calificaciones"
+                Text="Semana 3: CGuamba Sistema de calificaciones con Login"
                 FontSize="28"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center"
                 TextColor="DarkRed"
+                />
+            
+            <Label 
+                x:Name="lblNombre"
+                FontSize="28"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                TextColor="DarkBlue"
                 />
 
             <Picker x:Name="pkEstudiantes" Title="Estudiantes">

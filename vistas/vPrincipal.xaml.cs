@@ -7,13 +7,19 @@ public partial class vPrincipal : ContentPage
 		InitializeComponent();
 	}
 
+	public vPrincipal(string user)
+	{
+		InitializeComponent();
+        lblNombre.Text = $"Bienvenido {user}!";
+    }
+
     private void BtnCalcular_Clicked(object sender, EventArgs e)
     {
         try
         {
             ValidarCampos();
 
-            string estudiante = pkEstudiantes.SelectedItem.ToString();
+            string estudiante = pkEstudiantes.SelectedItem?.ToString();
             double numSegP1 = ObtieneDoubleYValidaEntradaNumerica(txtNumSegP1);
             double numExamP1 = ObtieneDoubleYValidaEntradaNumerica(txtNumExamP1);
             double numSegP2 = ObtieneDoubleYValidaEntradaNumerica(txtNumSegP2);
@@ -25,24 +31,29 @@ public partial class vPrincipal : ContentPage
 
             double final = notaParcial1 + notaParcial2;
 
-            lblNotaParcial1.Text = "Nota Parcial (1): " + notaParcial1.ToString();
-            lblNotaParcial2.Text = "Nota Parcial (2): " + notaParcial2.ToString();
-            lblNotaFinal.Text = "Nota Final: " + final.ToString();
+            lblNotaParcial1.Text = $"Nota Parcial (1): {notaParcial1}";
+            lblNotaParcial2.Text = $"Nota Parcial (2): {notaParcial2}";
+            lblNotaFinal.Text = $"Nota Final: {final}";
 
             string estado = EvaluaEstado(final);
 
-            DisplayAlert("MENSAJE DE BIENVENIDA",
-                "Bienvenido " +
-                "\nEste es el detalle del registro para el estudiante: " + estudiante+
-                "\nNota Seguimiento 1:\t" + numSegP1+
-                "\nNota Examen 1:\t\t" + numExamP1 +
-                "\nNota Parcial 1:\t\t" + notaParcial1 +
-                "\n\nNota Seguimiento 2:\t" + numSegP2+
-                "\nNota Examen 2:\t\t" + numExamP2 +
-                "\nNota Parcial 2:\t\t" + notaParcial2 +
-                "\n\nNOTA FINAL 2:\t" + final +
-                "\nEstado estudiante:\t\t" + estado+
-                "\n\nFecha del registro:\t" + fechaRegistro, "OK");
+            string mensaje = $@"
+                    Bienvenido
+                    Este es el detalle del registro para el estudiante: {estudiante}
+                    Nota Seguimiento 1: {numSegP1}
+                    Nota Examen 1: {numExamP1}
+                    Nota Parcial 1: {notaParcial1}
+                    
+                    Nota Seguimiento 2: {numSegP2}
+                    Nota Examen 2: {numExamP2}
+                    Nota Parcial 2: {notaParcial2}
+                    
+                    NOTA FINAL: {final}
+                    Estado estudiante: {estado}
+                    
+                    Fecha del registro: {fechaRegistro}";
+
+            DisplayAlert("MENSAJE DE BIENVENIDA", mensaje, "OK");
         } catch (Exception ex) {
             DisplayAlert("ERROR", ex.Message, "Cerrar");
         }
@@ -72,6 +83,11 @@ public partial class vPrincipal : ContentPage
 
     private double ObtieneDoubleYValidaEntradaNumerica(Entry txtEntry)
     {
+        if (string.IsNullOrWhiteSpace(txtEntry.Text))
+        {
+            txtEntry.Focus();
+            throw new Exception("Campo es obligatorio");
+        }
         double valor;
         try
         {
@@ -80,37 +96,25 @@ public partial class vPrincipal : ContentPage
         catch (Exception ex)
         {
             txtEntry.Focus();
-            throw new Exception("Error con el campo númerico (Entero con decimales separado por coma), " +
-                "por favor corrija el valor y vuelva a intentar. "+ex.Message.ToString());
+            throw new Exception($"Error con el campo numérico (Entero con decimales separado por coma), " +
+                $"por favor corrija el valor y vuelva a intentar. {ex.Message}");
         }
         if (valor > 10)
         {
             txtEntry.Focus();
             throw new Exception("El valor no puede ser mayor a 10");
         }
-        if (string.IsNullOrWhiteSpace(txtEntry.Text))
-        {
-            txtEntry.Focus();
-            throw new Exception("Campo es obligatorio");
-        }
+        
         return valor;
     }
 
     private void ValidarCampos()
     {
 
-        try
-        {
-            if (string.IsNullOrWhiteSpace(pkEstudiantes.SelectedItem.ToString()))
-            {
-                pkEstudiantes.Focus();
-                throw new Exception("Por favor elija un estudiante.");
-            }
-        }
-        catch (Exception ex)
+        if (pkEstudiantes.SelectedItem == null || string.IsNullOrWhiteSpace(pkEstudiantes.SelectedItem.ToString()))
         {
             pkEstudiantes.Focus();
-            throw new Exception("Por favor seleccione un estudiante." + ex.Message.ToString());
+            throw new Exception("Por favor seleccione un estudiante.");
         }
 
     }
